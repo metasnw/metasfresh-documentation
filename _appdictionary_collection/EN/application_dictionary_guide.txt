@@ -1,0 +1,53 @@
+preliminary
+you need to have:
+- metasfresh stack running db, webapi and app server at least
+- db access 
+- java client with access to db
+- ID server setup when you want to contribute your scripts
+
+
+you need to understand these concepts:
+- elements 
+- Layers: DB, AD Table and Column, AD Window, Tab, Field, UI layout 
+- 
+
+you need to know:
+- how to use the zoom feature in java client 
+- how to run processes in java client 
+- how to navigate through records in java client 
+
+## Create AD Table 
+- open Window "Table and Column"
+- start search 
+- switch to single view
+- click on new record
+- put a table name. That name will be used for creating the db table.
+- name = puty friendly name
+- berechtigungsstufe = client + org
+- copy from columns from table
+- pick "table Template"
+- system columns are copied 
+- zoom into element
+- create new element 
+- columname= db column name
+- name = name to be displayed to the user
+- go back to table and column
+- select element 
+- save
+- create your own columns 
+
+## Create Database Table
+- run process "synchronize columns"
+- now the table and columns are created in postgres
+
+## create a window with a tab linking to your new table
+- open window management
+- create new tab 
+- select table that you created before
+- run process create column from table
+
+
+
+run this to allow writing data to the new table.
+it will create a sequence for the new primary key column 
+http://docs.metasfresh.org/support_collection/en/sequence_refresh.html
